@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = serial-tests
 
-AM_CFLAGS = -Wall $(LIBOSMOCORE_CFLAGS) -I$(top_builddir)/src -pthread
+AM_CFLAGS = -Wall $(LIBOSMOCORE_CFLAGS) -I$(top_builddir)/src -pthread -mcpu=cortex-a9 -mtune=cortex-a9 -march=armv7-a -mfpu=neon -mfloat-abi=softfp -marm -O3
 
 check_PROGRAMS = conv_test
 

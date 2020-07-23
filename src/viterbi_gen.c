@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#ifndef HAVE_SSE3
+#if !(defined(HAVE_SSE3) || defined(__ARM_NEON__))
 #include <stdint.h>
 #include <string.h>
 
